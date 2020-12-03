@@ -30,40 +30,40 @@
                     size: 'mini',
                     class: 'foo',//全局样式可对象,可数组
                     formList: [
-                        // {
-                        //     filId: 'name',
-                        //     label: '姓名',
-                        //     type: 'input',
-                        //     width: 8,
-                        //     labelWidth: '80px',
-                        //     isShowLabel: true,
-                        //     required: true,
-                        //     class: '',////单个el-item样式
-                        //     //设置具体表单属性功能
-                        //     attr: {
-                        //         //此处arrts为具体组件的v-bind属性
-                        //         attrs: {
-                        //             maxLength: 10,
-                        //             disabled: false,
-                        //             readonly: false,
-                        //         },
-                        //         on: {
-                        //             change: (val) => {
-                        //                 console.log(val)
-                        //             }
-                        //         },
-                        //         slots: {
-                        //             // 第一个参数是渲染函数，第二个参数是作用域插槽的数据
-                        //             prefix(h) {
-                        //                 return h('i', {class: 'el-input__icon el-icon-search'})
-                        //             },
-                        //         },
-                        //         style: {
-                        //             color: 'red'
-                        //         },
-                        //     }
-                        //
-                        // },
+                        {
+                            filId: 'name',
+                            label: '姓名',
+                            type: 'input',
+                            width: 8,
+                            labelWidth: '80px',
+                            isShowLabel: true,
+                            required: true,
+                            class: '',////单个el-item样式
+                            //设置具体表单属性功能
+                            attr: {
+                                //此处arrts为具体组件的v-bind属性
+                                attrs: {
+                                    maxLength: 10,
+                                    disabled: false,
+                                    readonly: false,
+                                },
+                                on: {
+                                    change: (val) => {
+                                        console.log(val)
+                                    }
+                                },
+                                slots: {
+                                    // 第一个参数是渲染函数，第二个参数是作用域插槽的数据
+                                    prefix(h) {
+                                        return h('i', {class: 'el-input__icon el-icon-search'})
+                                    },
+                                },
+                                style: {
+                                    color: 'red'
+                                },
+                            }
+
+                        },
                         {
                             filId: 'title',
                             label: '标题',

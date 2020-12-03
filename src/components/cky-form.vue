@@ -3,7 +3,7 @@
         <el-row :gutter="formDesc.gutter" justify="center" :type="formDesc.flex">
             <el-form ref="form"
                      :label-position="formDesc.labelPosition"
-                     :label-width="formDesc.labelWidth"
+                     :label-width="computedLabelWidth"
                      :rules="formDesc.rules"
                      :size="formDesc.size"
                      :model="formData">
@@ -37,6 +37,8 @@
 </template>
 
 <script>
+    import {isNumber} from "./methods";
+
     export default {
         name: "cky-form",
         data() {
@@ -77,10 +79,20 @@
                 console.log(45)
             }
         },
+        filter: {
+        },
         computed: {
-            getEventName(on) {
-                console.log(on)
-            }
+            //计算全局的labelwidth
+            computedLabelWidth() {
+                if (isNumber(this.formDesc.labelWidth)) {
+                    return `${this.formDesc.labelWidth}px`
+                }
+                else {
+                    return this.formDesc.labelWidth
+                }
+            },
+
+
         }
 
     }
